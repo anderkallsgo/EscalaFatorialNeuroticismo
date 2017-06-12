@@ -1,6 +1,7 @@
 package com.efn.Formulario;
 
 public class Resposta {
+
     private final int numQuestao;
     private final Alternativa alternativa;
 

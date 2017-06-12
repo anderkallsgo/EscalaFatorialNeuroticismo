@@ -14,6 +14,7 @@ public class EFNTeste {
     public void deve_criar_um_formulario_com_cinco_questoes(){
 
         Formulario testeDePersonalidade =  new Formulario("Teste de Personalidade");
+
         Alternativa alternativaQ1a =  new Alternativa("Azul", 3);
         Alternativa alternativaQ1b =  new Alternativa("Amarelo", 5);
         Alternativa alternativaQ1c =  new Alternativa("Verde", 4);
@@ -26,7 +27,7 @@ public class EFNTeste {
         Alternativa alternativaQ2d = new Alternativa("Medo", 6);
         Alternativa alternativaQ2e = new Alternativa("Anciosa", 4);
 
-        List<Alternativa> listaDeAlternativas = new ArrayList<Alternativa>();
+        List<Alternativa> listaDeAlternativas = new ArrayList<Alternativa>();//List<Alternativa> apenas para imprimir as alternativas
 
         Questao questao1 = new Questao("Qual sua cor favorita? ", listaDeAlternativas);
         testeDePersonalidade.adicionar(questao1);
@@ -37,13 +38,13 @@ public class EFNTeste {
         System.out.println(testeDePersonalidade.getNome());
         System.out.println(questao1.getEnunciado());
         System.out.println("A: "+alternativaQ1a.getDescricao()+" B: "+alternativaQ1b.getDescricao()+" C: "+alternativaQ1c.getDescricao()+" D: "+alternativaQ1d.getDescricao()+" E: "+alternativaQ1e.getDescricao());
-
+        System.out.println();
         System.out.println(questao2.getEnunciado());
         System.out.println("A: "+alternativaQ2a.getDescricao()+" B: "+alternativaQ2b.getDescricao()+" C: "+alternativaQ2c.getDescricao()+" D: "+alternativaQ2d.getDescricao()+" E: "+alternativaQ2e.getDescricao());
 
         Gabarito gabaritoTesteDePersonalidade = new Gabarito("Teste de Personalidade");
-        Resposta resposta1 = new Resposta(1, alternativaQ1d);
-        Resposta resposta2 = new Resposta(2, alternativaQ2b);
+        Resposta resposta1 = new Resposta(1, alternativaQ1c);
+        Resposta resposta2 = new Resposta(2, alternativaQ2d);
 
         gabaritoTesteDePersonalidade.adicionar(resposta1);
         gabaritoTesteDePersonalidade.adicionar(resposta2);
